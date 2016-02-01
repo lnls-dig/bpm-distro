@@ -3,23 +3,26 @@
 set -e
 set -x
 
+YUM_DOWNLOADONLY="--downloadonly --downloaddir=kickstart_build/all_rpms/"
+
+# Source ackages variables
+. ./packages.sh
+
+### Run everything "download only" first so we have all packages 
+### in a single place
+
 # Update database
-sudo yum update -y
-
-# Install CentOS basic packages
-sudo yum groupinstall -y "Basic"
-
+sudo yum update -y ${YUM_DONWLOADONLY}
 # Install CentOS development tools
-sudo yum groupinstall -y "Development Tools"
-
+sudo yum groupinstall -y ${YUM_DONWLOADONLY} ${GROUPINSTALL_PACKAGES[@]} 
 # Install basic networking tools
-sudo yum install -y net-tools
+sudo yum install -y ${YUM_DONWLOADONLY} ${PACKAGES} 
 
-# Install utilities
-sudo yum install -y vim git make automake autoconf libtool pkgconfig \
-binutils readline perl gcc-c++ python wget glib2 glib2-devel \
-uuid-devel readline-devel libusb-devel bzip2-devel libxml2-devel \
-perl-XML-Simple
+### Install everything normally
 
-# Install security packages
-sudo yum install -y selinux-policy
+# Update database
+sudo yum update -y 
+# Install CentOS development tools
+sudo yum groupinstall -y ${GROUPINSTALL_PACKAGES[@]} 
+# Install basic networking tools
+sudo yum install -y ${PACKAGES} 

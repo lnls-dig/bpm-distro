@@ -11,3 +11,6 @@ set -x
 
 # Setup initscripts
 ./setup-initscripts.sh
+
+# Setup ISO tree
+./setup-iso-tree.sh

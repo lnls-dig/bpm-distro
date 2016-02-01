@@ -58,6 +58,9 @@ cp -r ${MOUNT_POINT}/isolinux/* kickstart_build/isolinux/
 cp ${MOUNT_POINT}/.discinfo kickstart_build/isolinux/
 cp -r ${MOUNT_POINT}/LiveOS/* kickstart_build/isolinux/LiveOS
 
+# Copy ISO packages into local folder
+cp ${MOUNT_POINT}/Packages/* kickstart_build/all_rpms/
+
 ### Don't get default script from site. This is already available in 
 ### kickstart_build/utils/gather_pacakges.pl
 ## Get script to parse comps.xml

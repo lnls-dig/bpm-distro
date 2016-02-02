@@ -108,5 +108,5 @@ kickstart_build/all_rpms kickstart_build/isolinux/Packages ${HOST_ARCH}
 # Testing the dependencies
 cd kickstart_build/isolinux/Packages
 mkdir -p /tmp/testdb
-rpm --initdb --dpath /tmp/testdb
-rpm --test --dpath /tmp/testdb -Uvh *.rpm
+rpm --initdb --dbpath /tmp/testdb
+rpm --test --dbpath /tmp/testdb -Uvh *.rpm

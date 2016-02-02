@@ -50,6 +50,10 @@ sudo mount ${ISO_PATH} ${MOUNT_POINT}
 ## Remove all files for precaution. We want to start cleanly
 #rm -rf kickstart_build
 
+# Exclude isolinux directory contents (including hidden files) as this should be 
+# copied as is from disk image. Ignore stderr (errors from directories starting with '.')
+rm -rf kickstart_build/isolinux/
+
 # Create kickstart tree
 mkdir -p kickstart_build/{isolinux/{images,ks,LiveOS,Packages},utils,all_rpms}
 

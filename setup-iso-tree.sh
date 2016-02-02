@@ -64,7 +64,10 @@ cp ${MOUNT_POINT}/.discinfo kickstart_build/isolinux/
 cp -r ${MOUNT_POINT}/LiveOS/* kickstart_build/isolinux/LiveOS
 
 # Copy ISO packages into local folder
-cp ${MOUNT_POINT}/Packages/* kickstart_build/all_rpms/ || /bin/true
+sudo cp ${MOUNT_POINT}/Packages/* kickstart_build/all_rpms/
+# Change permissions
+sudo chmod -R 755 kickstart_build/all_rpms/
+sudo chown -R ${USER}:${USER} kickstart_build/all_rpms/
 
 # Download oll of our installed packages
 cd kickstart_build/all_rpms/

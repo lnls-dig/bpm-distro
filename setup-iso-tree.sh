@@ -67,7 +67,7 @@ cp ${MOUNT_POINT}/Packages/* kickstart_build/all_rpms/ || /bin/true
 
 # Download oll of our installed packages
 cd kickstart_build/all_rpms/
-rpm -qa > installed_packages; while read -r package; do sudo yumdownloader ${pacakge}; done < installed_packages
+rpm -qa > installed_packages; while read -r package; do sudo yumdownloader ${package}; done < installed_packages
 rm installed_packages
 cd ../../
 

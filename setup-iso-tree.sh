@@ -52,8 +52,12 @@ sudo mount ${ISO_PATH} ${MOUNT_POINT}
 #rm -rf kickstart_build
 
 # Exclude isolinux directory contents (including hidden files) as this should be 
-# copied as is from disk image. Ignore stderr (errors from directories starting with '.')
-rm -rf kickstart_build/isolinux/
+# copied as is from disk image. 
+cd kickstart_build
+find isolinux -type f -not -name "ks.cfg" -not -name "isolinux.cfg" -not -name ".keepme" | xargs rm -f
+cd ../
+
+exit 1
 
 # Create kickstart tree
 mkdir -p kickstart_build/{isolinux/{images,ks,LiveOS,Packages},utils,all_rpms}

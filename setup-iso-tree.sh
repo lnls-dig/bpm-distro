@@ -39,8 +39,8 @@ fi
 
 # Mount install disk
 sudo mkdir -p ${MOUNT_POINT}
-# Unmmount unit if it's already mounted
-sudo umount ${ISO_PATH}
+# Unmmount unit if it's already mounted. Ignore error if mounted
+sudo umount ${ISO_PATH} || /bin/true
 sudo mount ${ISO_PATH} ${MOUNT_POINT}
 
 ### From this point on, the isntructions were extract from 

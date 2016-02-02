@@ -74,7 +74,7 @@ cd kickstart_build/all_rpms/
 rpm -qa | \
 # Exclude gpg-pubkey* fake packages
 sed -e "s/^gpg-pubkey.*//g" > \
-installed_packages; while read -r package; do COMMAND="sudo yumdownloader ${package}"; echo "${COMMAND}"; eval sudo ${COMMAND}; done < installed_packages
+installed_packages; while read -r package; do COMMAND="sudo yumdownloader --resolve ${package}"; echo "${COMMAND}"; eval ${COMMAND}; done < installed_packages
 rm installed_packages
 cd ../../
 

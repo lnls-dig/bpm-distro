@@ -1164,6 +1164,11 @@
       <packagereq type="mandatory">bzip2-devel</packagereq>
       <packagereq type="mandatory">libxml-devel</packagereq>
       <packagereq type="mandatory">selinux-policy</packagereq>
+      <packagereq type="mandatory">openssl</packagereq>
+      <packagereq type="mandatory">fipscheck</packagereq>
+      <packagereq type="mandatory">kernel-tools-libs</packagereq>
+      <packagereq type="mandatory">libdb-utils</packagereq>
+      <packagereq type="mandatory">gdb</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

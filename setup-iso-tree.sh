@@ -4,6 +4,7 @@ set -e
 set -x
 
 USER=$(whoami)
+HOST_ARCH=x86_64
 MOUNT_POINT=/media/centos-install-disk
 
 function usage() {
@@ -93,3 +94,19 @@ cd ../../
 ## Change permissions
 #sudo chmod 755 kickstart_build/isolinux/ks/ks.cfg
 #sudo chown ${USER}:${USER} kickstart_build/isolinux/ks/ks.cfg
+
+# Copy packages specified in file comps.xml to Packages directory. They 
+# must reside in all_rpms directory
+kickstart_build/utils/gather_packages.pl kickstart_build/comps.xml \
+kickstart_build/all_rpms kickstart_build/isolinux/Packages ${HOST_ARCH}
+
+# Copy package dependencies into Packages directory. They must reside in 
+# all_rpms directory
+kickstart_build/utils/resolve_deps.pl \
+kickstart_build/all_rpms kickstart_build/isolinux/Packages ${HOST_ARCH}
+
+# Testing the dependencies
+cd kickstart_build/isolinux/Packages
+mkdir -p /tmp/testdb
+rpm --initdb --dpath /tmp/testdb
+rpm --test --dpath /tmp/testdb -Uvh *.rpm

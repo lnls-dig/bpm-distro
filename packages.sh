@@ -5,8 +5,9 @@ set -x
 
 # Group Install packages
 GROUPINSTALL_PACKAGES=()
-GROUPINSTALL_PACKAGES+=("Basic")
-GROUPINSTALL_PACKAGES+=("Development Tools")
+GROUPINSTALL_PACKAGES+=('Core')
+GROUPINSTALL_PACKAGES+=('Minimal Install')
+GROUPINSTALL_PACKAGES+=('Development Tools')
 
 PACKAGES="net-tools vim git make automake autoconf libtool pkgconfig \
 binutils readline perl gcc-c++ python wget glib2 glib2-devel \

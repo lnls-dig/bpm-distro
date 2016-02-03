@@ -11,6 +11,6 @@ set -x
 # Update database
 sudo yum update -y 
 # Install CentOS development tools
-sudo yum groupinstall -y ${GROUPINSTALL_PACKAGES[@]} 
+sudo yum groupinstall -y "${GROUPINSTALL_PACKAGES[@]}"
 # Install basic networking tools
-sudo yum install -y ${PACKAGES} 
+sudo yum install -y "${PACKAGES}"

@@ -56,14 +56,15 @@ sudo mount ${ISO_PATH} ${MOUNT_POINT}
 cd kickstart_build
 # Remove protected images folder first
 sudo rm -rf isolinux/images
+sudo rm -rf isolinux/EFI
 find isolinux -type f -not -name "ks.cfg" -not -name "isolinux.cfg" -not -name ".keepme" -exec rm -f "{}" \;
 cd ../
 
 # Create kickstart tree
-mkdir -p kickstart_build/{isolinux/{images,ks,LiveOS,EFI,Packages},utils,all_rpms}
+mkdir -p kickstart_build/{isolinux/{isolinux,images,ks,LiveOS,EFI,Packages},utils,all_rpms}
 
 # Copy files into created structure
-find ${MOUNT_POINT}/isolinux/ -type f -not -name "isolinux.cfg" -exec cp "{}" kickstart_build/isolinux/ \;
+find ${MOUNT_POINT}/isolinux/ -type f -not -name "isolinux.cfg" -exec cp "{}" kickstart_build/isolinux/isolinux \;
 cp ${MOUNT_POINT}/.discinfo kickstart_build/isolinux/
 cp -r ${MOUNT_POINT}/images/* kickstart_build/isolinux/images
 cp -r ${MOUNT_POINT}/EFI/* kickstart_build/isolinux/EFI

@@ -13,4 +13,4 @@ PACKAGES="net-tools vim git make automake autoconf libtool pkgconfig \
 binutils readline perl gcc-c++ python wget glib2 glib2-devel \
 uuid-devel readline-devel libusb-devel bzip2-devel libxml2-devel \
 perl-XML-Simple selinux-policy yum-utils openssl libdb-utils createrepo \
-genisoimage"
+genisoimage pykickstart"

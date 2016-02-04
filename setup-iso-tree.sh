@@ -60,12 +60,13 @@ find isolinux -type f -not -name "ks.cfg" -not -name "isolinux.cfg" -not -name "
 cd ../
 
 # Create kickstart tree
-mkdir -p kickstart_build/{isolinux/{images,ks,LiveOS,Packages},utils,all_rpms}
+mkdir -p kickstart_build/{isolinux/{images,ks,LiveOS,EFI,Packages},utils,all_rpms}
 
 # Copy files into created structure
 find ${MOUNT_POINT}/isolinux/ -type f -not -name "isolinux.cfg" -exec cp "{}" kickstart_build/isolinux/ \;
 cp ${MOUNT_POINT}/.discinfo kickstart_build/isolinux/
 cp -r ${MOUNT_POINT}/images/* kickstart_build/isolinux/images
+cp -r ${MOUNT_POINT}/EFI/* kickstart_build/isolinux/EFI
 cp -r ${MOUNT_POINT}/LiveOS/* kickstart_build/isolinux/LiveOS
 
 # Copy ISO packages into local folder

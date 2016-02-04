@@ -1166,7 +1166,14 @@
       <packagereq type="mandatory">selinux-policy</packagereq>
       <packagereq type="mandatory">openssl</packagereq>
       <packagereq type="mandatory">fipscheck</packagereq>
+      <packagereq type="mandatory">ntp</packagereq>
+      <packagereq type="mandatory">ntpdate</packagereq>
+      <packagereq type="mandatory">acpid</packagereq>
+      <packagereq type="mandatory">kernel</packagereq>
+      <packagereq type="mandatory">kernel-tools</packagereq>
       <packagereq type="mandatory">kernel-tools-libs</packagereq>
+      <packagereq type="mandatory">kernel-devel</packagereq>
+      <packagereq type="mandatory">kernel-headers</packagereq>
       <packagereq type="mandatory">libdb-utils</packagereq>
       <packagereq type="mandatory">gdb</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
@@ -1191,7 +1198,6 @@
       <packagereq type="default">iwl6050-firmware</packagereq>
       <packagereq type="default">iwl7260-firmware</packagereq>
       <packagereq type="default">iwl7265-firmware</packagereq>
-      <packagereq type="default">kernel-tools</packagereq>
       <packagereq type="default">libertas-sd8686-firmware</packagereq>
       <packagereq type="default">libertas-sd8787-firmware</packagereq>
       <packagereq type="default">libertas-usb8388-firmware</packagereq>

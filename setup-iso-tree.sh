@@ -60,7 +60,9 @@ sudo find isolinux/EFI -type f \
     -not -name "grub.cfg" \
     -exec rm -f "{}" \;
 # Don't delete customized files
-find isolinux -type f \
+find isolinux \
+    -path postinstall -prune \
+    -type f \
     -not -name "ks.cfg" \
     -not -name "isolinux.cfg" \
     -not -name ".keepme" \
@@ -74,10 +76,12 @@ find isolinux -type f \
 cd ../
 
 # Create kickstart tree
-mkdir -p kickstart_build/{isolinux/{isolinux,images,ks,LiveOS,EFI,Packages},utils,all_rpms}
+mkdir -p kickstart_build/{isolinux/{isolinux,images,ks,LiveOS,EFI,Packages,postinstall},utils,all_rpms}
 
 # Copy files into created structure
-find ${MOUNT_POINT}/isolinux/ -type f \
+find ${MOUNT_POINT}/isolinux/ \
+    -path postinstall -prune \
+    -type f \
     -not -name "ks.cfg" \
     -not -name "isolinux.cfg" \
     -not -name ".keepme" \

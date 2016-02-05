@@ -56,8 +56,10 @@ sudo mount ${ISO_PATH} ${MOUNT_POINT}
 cd kickstart_build
 # Remove protected images folder first
 sudo rm -rf isolinux/images
-sudo rm -rf isolinux/EFI
-# Don't deleted customized files
+sudo find isolinux/EFI -type f \
+    -not -name "grub.cfg" \
+    -exec rm -f "{}" \;
+# Don't delete customized files
 find isolinux -type f \
     -not -name "ks.cfg" \
     -not -name "isolinux.cfg" \

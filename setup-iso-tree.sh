@@ -94,7 +94,11 @@ find ${MOUNT_POINT}/isolinux/ \
     -exec cp "{}" kickstart_build/isolinux/isolinux \;
 cp ${MOUNT_POINT}/.discinfo kickstart_build/isolinux/
 cp -r ${MOUNT_POINT}/images/* kickstart_build/isolinux/images
-cp -r ${MOUNT_POINT}/EFI/* kickstart_build/isolinux/EFI
+find ${MOUNT_POINT}/EFI/ \
+    -path postinstall -prune \
+    -type f \
+    -not -name "grub.cfg" \
+    -exec cp "{}" kickstart_build/isolinux/EFI \;
 cp -r ${MOUNT_POINT}/LiveOS/* kickstart_build/isolinux/LiveOS
 
 # Copy ISO packages into local folder

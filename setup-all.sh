@@ -6,6 +6,10 @@ set -x
 # Path of device containing Distribution (CentOS 7) install disk
 ISO_PATH=
 
+function usage() {
+    echo "Usage: $0 [-i <Path to device containing ISO file>]"
+}
+
 # Get command-line options
 while getopts ":i:" opt; do
     case "${opt}" in

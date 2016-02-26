@@ -10,7 +10,7 @@ mkdir -p kickstart_build/isolinux/postinstall/apps
 cd kickstart_build/isolinux/postinstall/apps
 
 # Clone BPM App repo
-git clone https://github.com/lnls-bpm/bpm-app
+git clone https://github.com/lnls-dig/bpm-app
 
 # Download the repos, but don't install them
 cd bpm-app

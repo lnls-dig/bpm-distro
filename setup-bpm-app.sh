@@ -9,6 +9,9 @@ PWD=$(pwd)
 mkdir -p kickstart_build/isolinux/postinstall/apps
 cd kickstart_build/isolinux/postinstall/apps
 
+# Remove a psosibly old bpm-app repo
+rm -rf bpm-app
+
 # Clone BPM App repo
 git clone https://github.com/lnls-dig/bpm-app
 

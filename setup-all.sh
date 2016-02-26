@@ -48,5 +48,8 @@ fi
 # Setup ISO tree
 ./setup-iso-tree.sh -i ${ISO_PATH}
 
+# Setup BPM app packages
+./setup-bpm-app.sh
+
 # Setup Repo for building ISO image of distribution
 ./setup-repo.sh

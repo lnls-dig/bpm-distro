@@ -56,12 +56,14 @@ sudo mount ${ISO_PATH} ${MOUNT_POINT}
 cd kickstart_build
 # Remove protected images folder first
 sudo rm -rf isolinux/images
-sudo find isolinux/EFI -type f \
+sudo find isolinux/EFI \
+    ! -path "*/postinstall/*" \
+    -type f \
     -not -name "grub.cfg" \
     -exec rm -f "{}" \;
 # Don't delete customized files
 find isolinux \
-    ! -path "*/postinstall/*" -prune \
+    ! -path "*/postinstall/*" \
     -type f \
     -not -name "ks.cfg" \
     -not -name "isolinux.cfg" \
@@ -80,7 +82,7 @@ mkdir -p kickstart_build/{isolinux/{isolinux,images,ks,LiveOS,EFI,Packages,posti
 
 # Copy files into created structure
 find ${MOUNT_POINT}/isolinux/ \
-    ! -path "*/postinstall/*" -prune \
+    ! -path "*/postinstall/*" \
     -type f \
     -not -name "ks.cfg" \
     -not -name "isolinux.cfg" \
@@ -95,7 +97,7 @@ find ${MOUNT_POINT}/isolinux/ \
 cp ${MOUNT_POINT}/.discinfo kickstart_build/isolinux/
 cp -r ${MOUNT_POINT}/images/* kickstart_build/isolinux/images
 find ${MOUNT_POINT}/EFI/ \
-    ! -path "*/postinstall/*" -prune \
+    ! -path "*/postinstall/*" \
     -type f \
     -not -name "grub.cfg" \
     -exec cp "{}" kickstart_build/isolinux/EFI \;

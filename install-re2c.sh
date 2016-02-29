@@ -3,19 +3,10 @@
 set -e
 set -x
 
-RE2C_VERSION=0.14.3
+RE2C_VERSION=0.13.5-1
 
-# Download tarball
-wget https://github.com/skvadrik/re2c/releases/download/${RE2C_VERSION}/re2c-${RE2C_VERSION}.tar.gz
+# Download RPM
+wget pkgs.repoforge.org/re2c/re2c-${RE2C_VERSION}.el6.rf.x86_64.rpm
 
-# Extract
-tar xzvf re2c-${RE2C_VERSION}.tar.gz
-
-# Change directory
-cd re2c-${RE2C_VERSION}
-
-# Install
-./configure && make && sudo make install
-
-# Go back
-cd ../
+# Install it
+sudo rpm -Uvh re2c-${RE2C_VERSION}.*.rpm

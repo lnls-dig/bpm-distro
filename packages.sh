@@ -14,7 +14,8 @@ binutils readline perl gcc gcc-c++ python wget glib2 glib2-devel \
 uuid-devel readline-devel libusb-devel bzip2-devel libxml2-devel \
 perl-XML-Simple selinux-policy yum-utils openssl libdb-utils createrepo \
 genisoimage pykickstart kernel kernel-tools kernel-tools-libs kernel-headers \
-ntp ntpdate acpid libusb-devel bash-completion perl-ExtUtils-* "
+ntp ntpdate acpid libusb-devel bash-completion perl-ExtUtils-* perl-Pod-Checker \
+perl-Pod-Parser "
 
 # EPICS dependencies
 PACKAGES+="libstdc++-devel lapack openmotif-devel fontconfig-devel \

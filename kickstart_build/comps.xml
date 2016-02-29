@@ -1176,6 +1176,11 @@
       <packagereq type="mandatory">kernel-headers</packagereq>
       <packagereq type="mandatory">libdb-utils</packagereq>
       <packagereq type="mandatory">gdb</packagereq>
+      <packagereq type="mandatory">curl</packagereq>
+      <packagereq type="mandatory">libusb-devel</packagereq>
+      <packagereq type="mandatory">lapack</packagereq>
+      <packagereq type="mandatory">flex</packagereq>
+      <packagereq type="mandatory">re2c</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

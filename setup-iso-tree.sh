@@ -112,8 +112,8 @@ sudo chown -R ${USER}:${USER} kickstart_build/all_rpms/
 # Download oll of our installed packages
 cd kickstart_build/all_rpms/
 rpm -qa | \
-# Exclude gpg-pubkey* fake packages
-sed -e "s/^gpg-pubkey.*//g" > \
+# Exclude gpg-pubkey* fake and re2c (installed separately) packages
+sed -e 's/^gpg-pubkey.*//g' -e 's/^re2c.*//g' > \
 installed_packages; while read -r package; do COMMAND="sudo yumdownloader --resolve ${package}"; echo "${COMMAND}"; eval ${COMMAND}; done < installed_packages
 rm installed_packages
 cd ../../

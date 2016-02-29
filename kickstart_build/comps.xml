@@ -1182,6 +1182,12 @@
       <packagereq type="mandatory">flex</packagereq>
       <packagereq type="mandatory">re2c</packagereq>
       <packagereq type="mandatory">bash-completion</packagereq>
+      <packagereq type="mandatory">perl-ExtUtils-CBuilder</packagereq>
+      <packagereq type="mandatory">perl-ExtUtils-Embed</packagereq>
+      <packagereq type="mandatory">perl-ExtUtils-Install</packagereq>
+      <packagereq type="mandatory">perl-ExtUtils-MakeMaker</packagereq>
+      <packagereq type="mandatory">perl-ExtUtils-Manifest</packagereq>
+      <packagereq type="mandatory">perl-ExtUtils-ParseXS</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

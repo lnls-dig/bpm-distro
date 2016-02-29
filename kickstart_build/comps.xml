@@ -1188,6 +1188,8 @@
       <packagereq type="mandatory">perl-ExtUtils-MakeMaker</packagereq>
       <packagereq type="mandatory">perl-ExtUtils-Manifest</packagereq>
       <packagereq type="mandatory">perl-ExtUtils-ParseXS</packagereq>
+      <packagereq type="mandatory">perl-Pod-Checker</packagereq>
+      <packagereq type="mandatory">perl-Pod-Parser</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

@@ -1181,6 +1181,7 @@
       <packagereq type="mandatory">lapack</packagereq>
       <packagereq type="mandatory">flex</packagereq>
       <packagereq type="mandatory">re2c</packagereq>
+      <packagereq type="mandatory">bash-completion</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

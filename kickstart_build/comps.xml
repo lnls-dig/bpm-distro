@@ -1190,6 +1190,16 @@
       <packagereq type="mandatory">perl-ExtUtils-ParseXS</packagereq>
       <packagereq type="mandatory">perl-Pod-Checker</packagereq>
       <packagereq type="mandatory">perl-Pod-Parser</packagereq>
+      <packagereq type="mandatory">opemotif-devel</packagereq>
+      <packagereq type="mandatory">freetype-devel</packagereq>
+      <packagereq type="mandatory">fontconfig-devel</packagereq>
+      <packagereq type="mandatory">libjpeg-turbo-devel</packagereq>
+      <packagereq type="mandatory">libtiff-devel</packagereq>
+      <packagereq type="mandatory">giflib-devel</packagereq>
+      <packagereq type="mandatory">libXaw-devel</packagereq>
+      <packagereq type="mandatory">libXp-devel</packagereq>
+      <packagereq type="mandatory">libX11-devel</packagereq>
+      <packagereq type="mandatory">libXext-devel</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

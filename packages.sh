@@ -17,6 +17,8 @@ genisoimage pykickstart kernel kernel-tools kernel-tools-libs kernel-headers \
 ntp ntpdate acpid libusb-devel bash-completion perl-ExtUtils-* perl-Pod-Checker \
 perl-Pod-Parser "
 
+
 # EPICS dependencies
-PACKAGES+="libstdc++-devel lapack openmotif-devel fontconfig-devel \
-libjpeg-turbo-devel libtiff-devel giflib-devel libcurl-devel flex"
+PACKAGES+="libstdc++-devel lapack freetype-devel openmotif-devel fontconfig-devel \
+libjpeg-turbo-devel libtiff-devel giflib-devel libcurl-devel flex \
+libX11-devel libXext-devel libXaw-devel libXp-devel "

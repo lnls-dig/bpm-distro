@@ -19,6 +19,6 @@ perl-Pod-Parser "
 
 
 # EPICS dependencies
-PACKAGES+="libstdc++-devel lapack freetype-devel openmotif-devel fontconfig-devel \
+PACKAGES+="libstdc++-devel lapack freetype-devel fontconfig-devel \
 libjpeg-turbo-devel libtiff-devel giflib-devel libcurl-devel flex \
 libX11-devel libXext-devel libXaw-devel libXp-devel "

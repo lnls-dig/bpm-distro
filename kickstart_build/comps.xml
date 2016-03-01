@@ -1200,6 +1200,10 @@
       <packagereq type="mandatory">libXp-devel</packagereq>
       <packagereq type="mandatory">libX11-devel</packagereq>
       <packagereq type="mandatory">libXext-devel</packagereq>
+      <packagereq type="mandatory">libstdc++-devel</packagereq>
+      <packagereq type="mandatory">libxml2-devel</packagereq>
+      <packagereq type="mandatory">libpng12-devel</packagereq>
+      <packagereq type="mandatory">ncurses-devel</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

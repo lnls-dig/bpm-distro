@@ -42,6 +42,9 @@ fi
 # Install missing packages from tarballs or from source
 ./install-re2c.sh
 
+# Install missing xorriso package and dependencies from tarballs or from source
+./install-xorriso.sh
+
 # Setup initscripts
 ./setup-initscripts.sh
 

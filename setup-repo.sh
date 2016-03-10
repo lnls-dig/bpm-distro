@@ -11,6 +11,6 @@ cd ../../
 # Build ISO
 cd kickstart_build
 chmod 644 isolinux/isolinux/isolinux.bin
-mkisofs -o lnls-bpm-centos7.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot \
-    -V 'CentOS 7 x86_64' \
-    -boot-load-size 4 -boot-info-table -R -J -v isolinux/
+xorriso -as mkisofs -v -R -J -V "CentOS 7 x86_64" -o "lnls-bpm-centos7.iso" \
+   -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4  \
+   -boot-info-table -isohybrid-mbr /usr/share/syslinux/isohdpfx.bin isolinux

@@ -54,5 +54,8 @@ fi
 # Setup BPM app packages
 ./setup-bpm-app.sh
 
+# Fix generated ISO for USB bootable support
+./fix-usb-boot-iso.sh
+
 # Setup Repo for building ISO image of distribution
 ./setup-repo.sh

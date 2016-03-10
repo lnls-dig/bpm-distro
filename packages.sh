@@ -15,7 +15,7 @@ uuid-devel readline-devel libusb-devel bzip2-devel libpng12-devel libxml2-devel 
 ncurses-devel perl-XML-Simple selinux-policy yum-utils openssl libdb-utils createrepo \
 genisoimage pykickstart kernel kernel-tools kernel-tools-libs kernel-headers \
 ntp ntpdate acpid libusb-devel bash-completion perl-ExtUtils-* perl-Pod-Checker \
-perl-Pod-Parser iptables-services xorriso "
+perl-Pod-Parser iptables-services "
 
 
 # EPICS dependencies

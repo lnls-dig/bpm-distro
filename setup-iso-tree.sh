@@ -95,6 +95,7 @@ find ${MOUNT_POINT}/isolinux/ \
     -not -name "grub.cfg" \
     -exec cp "{}" kickstart_build/isolinux/isolinux \;
 cp ${MOUNT_POINT}/.discinfo kickstart_build/isolinux/
+cp ${MOUNT_POINT}/.treeinfo kickstart_build/isolinux/
 cp -r ${MOUNT_POINT}/images/* kickstart_build/isolinux/images
 find ${MOUNT_POINT}/EFI/ \
     ! -path "*/postinstall/*" \

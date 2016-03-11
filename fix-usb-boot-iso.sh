@@ -9,7 +9,7 @@ mkdir -p irmod
 cd irmod
 
 # Extract initdrd into irmod
-xz -d < ../kickstart_build/isolinux/isolinux/initrd.img | cpio --extract --make-directories --no-absolute-filenames
+xz -d < ../kickstart_build/isolinux/isolinux/initrd.img | sudo cpio --extract --make-directories --no-absolute-filenames
 
 # Create special folder for our ks.cfg file
 mkdir ks
@@ -18,8 +18,10 @@ mkdir ks
 cp ../kickstart_build/isolinux/ks/ks.cfg ks/
 
 # Recreate initrd.img
-find . | cpio -H newc --create | xz --format=lzma --compress --stdout > ../kickstart_build/isolinux/isolinux/initrd.img 
+find . | cpio -H newc --create | xz --format=lzma --compress --stdout > initrd.img 
+
+sudo mv initrd.img ../kickstart_build/isolinux/isolinux/initrd.img
 
 # Cleanup
 cd ..
-rm -rf irmod
+sudo rm -rf irmod

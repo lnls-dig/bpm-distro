@@ -104,8 +104,13 @@ find ${MOUNT_POINT}/EFI/ \
     -exec cp "{}" kickstart_build/isolinux/EFI \;
 cp -r ${MOUNT_POINT}/LiveOS/* kickstart_build/isolinux/LiveOS
 
-# Copy ISO packages into local folder
-sudo cp ${MOUNT_POINT}/Packages/* kickstart_build/all_rpms/
+# Copy ISO packages into local folder, but skip the kernel packages
+# as they are installed separately
+find ${MOUNT_POINT}/Packages/  \
+    -type f \
+    -not -name "kernel*" \
+    -exec cp "{}" kickstart_build/all_rpms/ \;
+
 # Change permissions
 sudo chmod -R 755 kickstart_build/all_rpms/
 sudo chown -R ${USER}:${USER} kickstart_build/all_rpms/

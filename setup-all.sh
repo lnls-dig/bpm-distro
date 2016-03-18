@@ -45,9 +45,6 @@ fi
 # Install missing xorriso package and dependencies from tarballs or from source
 ./install-xorriso.sh
 
-# Leave just the msot recent kernel
-./cleanup-oldkernels.sh
-
 # Setup initscripts
 ./setup-initscripts.sh
 

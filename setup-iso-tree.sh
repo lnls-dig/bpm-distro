@@ -120,7 +120,7 @@ sudo chown -R ${USER}:${USER} kickstart_build/all_rpms/
 cd kickstart_build/all_rpms/
 rpm -qa | \
 # Exclude gpg-pubkey* fake and packages that are installed separately.
-# Exclude allç kernel pacakges, but the version we specified in
+# Exclude all kernel pacakges, but the version we specified in
 # KERNEL_VERSION
 sed -e 's/^gpg-pubkey.*//g' \
     -e 's/^re2c.*//g' \
@@ -128,8 +128,7 @@ sed -e 's/^gpg-pubkey.*//g' \
     -e 's/^libburn.*//g' \
     -e 's/^libisoburn.*//g' \
     -e 's/^xorriso.*//g' \
-    -e 's/\(^kernel.*${KERNEL_VERSION}\)/\1/g' > \
-    -e 's/^kernel.*//g' > \
+    -e "/^kernel.*${KERNEL_VERSION}/! s/^kernel.*//g" > \
 installed_packages; while read -r package; do COMMAND="sudo yumdownloader --resolve ${package}"; echo "${COMMAND}"; eval ${COMMAND}; done < installed_packages
 rm installed_packages
 cd ../../

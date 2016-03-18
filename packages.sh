@@ -3,6 +3,8 @@
 set -e
 set -x
 
+. ./repo-versions.sh
+
 # Group Install packages
 GROUPINSTALL_PACKAGES=()
 GROUPINSTALL_PACKAGES+=('Core')
@@ -13,10 +15,14 @@ PACKAGES="net-tools vim git make automake autoconf libtool pkgconfig \
 binutils readline perl gcc gcc-c++ python wget glib2 glib2-devel \
 uuid-devel readline-devel libusb-devel bzip2-devel libpng12-devel libxml2-devel \
 ncurses-devel perl-XML-Simple selinux-policy yum-utils openssl libdb-utils createrepo \
-genisoimage pykickstart kernel kernel-tools kernel-tools-libs kernel-headers \
-ntp ntpdate acpid libusb-devel bash-completion perl-ExtUtils-* perl-Pod-Checker \
-perl-Pod-Parser iptables-services syslinux pciutils "
+genisoimage pykickstart ntp ntpdate acpid libusb-devel bash-completion \
+perl-ExtUtils-* perl-Pod-Checker perl-Pod-Parser iptables-services syslinux \
+pciutils "
 
+# Kernel Packages
+PACKAGES+="kernel-${KERNEL_VERSION} kernel-tools-${KERNEL_VERSION} \
+kernel-tools-libs-${KERNEL_VERSION} kernel-headers-${KERNEL_VERSION} \
+kernel-devel-${KERNEL_VERSION} "
 
 # EPICS dependencies
 PACKAGES+="libstdc++-devel lapack freetype-devel fontconfig-devel \

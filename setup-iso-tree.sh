@@ -7,6 +7,8 @@ USER=$(whoami)
 HOST_ARCH=x86_64
 MOUNT_POINT=/media/centos-install-disk
 
+. ./repo-versions.sh
+
 function usage() {
     echo "Usage: $0 [-i <Path to device containing ISO file>]"
 }
@@ -108,7 +110,6 @@ cp -r ${MOUNT_POINT}/LiveOS/* kickstart_build/isolinux/LiveOS
 # as they are installed separately
 find ${MOUNT_POINT}/Packages/  \
     -type f \
-    -not -name "kernel*" \
     -exec cp "{}" kickstart_build/all_rpms/ \;
 
 # Change permissions
@@ -118,13 +119,17 @@ sudo chown -R ${USER}:${USER} kickstart_build/all_rpms/
 # Download oll of our installed packages
 cd kickstart_build/all_rpms/
 rpm -qa | \
-# Exclude gpg-pubkey* fake and packages that are installed separately
+# Exclude gpg-pubkey* fake and packages that are installed separately.
+# Exclude allç kernel pacakges, but the version we specified in
+# KERNEL_VERSION
 sed -e 's/^gpg-pubkey.*//g' \
     -e 's/^re2c.*//g' \
     -e 's/^libisofs.*//g' \
     -e 's/^libburn.*//g' \
     -e 's/^libisoburn.*//g' \
-    -e 's/^xorriso.*//g' > \
+    -e 's/^xorriso.*//g' \
+    -e 's/\(^kernel.*${KERNEL_VERSION}\)/\1/g' > \
+    -e 's/^kernel.*//g' > \
 installed_packages; while read -r package; do COMMAND="sudo yumdownloader --resolve ${package}"; echo "${COMMAND}"; eval ${COMMAND}; done < installed_packages
 rm installed_packages
 cd ../../

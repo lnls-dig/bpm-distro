@@ -19,12 +19,12 @@ genisoimage pykickstart ntp ntpdate acpid libusb-devel bash-completion \
 perl-ExtUtils-* perl-Pod-Checker perl-Pod-Parser iptables-services syslinux \
 pciutils "
 
-# Kernel Packages
-PACKAGES+="kernel-${KERNEL_VERSION} kernel-tools-${KERNEL_VERSION} \
-kernel-tools-libs-${KERNEL_VERSION} kernel-headers-${KERNEL_VERSION} \
-kernel-devel-${KERNEL_VERSION} "
-
 # EPICS dependencies
 PACKAGES+="libstdc++-devel lapack freetype-devel fontconfig-devel \
 libjpeg-turbo-devel libtiff-devel giflib-devel libcurl-devel flex \
 libX11-devel libXext-devel libXaw-devel libXp-devel "
+
+# Kernel Packages
+KERNEL_PACKAGES="kernel-${KERNEL_VERSION} kernel-tools-${KERNEL_VERSION} \
+kernel-tools-libs-${KERNEL_VERSION} kernel-headers-${KERNEL_VERSION} \
+kernel-devel-${KERNEL_VERSION} "

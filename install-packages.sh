@@ -14,3 +14,6 @@ sudo yum update -y
 sudo yum groupinstall -y "${GROUPINSTALL_PACKAGES[@]}"
 # Install basic networking tools
 sudo yum install -y ${PACKAGES}
+
+# Install specific kernel packages
+sudo yum downgrade -y ${KERNEL_PACKAGES}

@@ -1208,6 +1208,7 @@
       <packagereq type="mandatory">pciutils</packagereq>
       <packagereq type="mandatory">telnet</packagereq>
       <packagereq type="mandatory">psmisc</packagereq>
+      <packagereq type="mandatory">valgrind</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

@@ -1245,6 +1245,9 @@
       <packagereq type="default">ql2200-firmware</packagereq>
       <packagereq type="default">ql23xx-firmware</packagereq>
       <packagereq type="default">rdma</packagereq>
+      <packagereq type="optional">dracut</packagereq>
+      <packagereq type="optional">systemd</packagereq>
+      <packagereq type="optional">systemd-libs</packagereq>
       <packagereq type="optional">dracut-config-generic</packagereq>
       <packagereq type="optional">dracut-fips</packagereq>
       <packagereq type="optional">dracut-fips-aesni</packagereq>

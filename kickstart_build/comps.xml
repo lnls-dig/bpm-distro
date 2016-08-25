@@ -1212,6 +1212,9 @@
       <packagereq type="mandatory">dracut</packagereq>
       <packagereq type="mandatory">systemd</packagereq>
       <packagereq type="mandatory">systemd-libs</packagereq>
+      <packagereq type="mandatory">dracut-network</packagereq>
+      <packagereq type="mandatory">libgudev1</packagereq>
+      <packagereq type="mandatory">systemd-sysv</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

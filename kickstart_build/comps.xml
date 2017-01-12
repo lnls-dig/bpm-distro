@@ -160,12 +160,6 @@
       <packagereq type="mandatory">sqlite-devel</packagereq>
       <packagereq type="mandatory">startup-notification-devel</packagereq>
       <packagereq type="mandatory">systemd-devel</packagereq>
-      <packagereq type="mandatory">cryptsetup-libs</packagereq>
-      <packagereq type="mandatory">expat</packagereq>
-      <packagereq type="mandatory">libgcc</packagereq>
-      <packagereq type="mandatory">libgomp</packagereq>
-      <packagereq type="mandatory">libstdc++</packagereq>
-      <packagereq type="mandatory">java-1.7.0-openjdk</packagereq>
       <packagereq type="mandatory">tbb-devel</packagereq>
       <packagereq type="mandatory">tcl-devel</packagereq>
       <packagereq type="mandatory">tcp_wrappers-devel</packagereq>
@@ -1221,6 +1215,12 @@
       <packagereq type="mandatory">dracut-network</packagereq>
       <packagereq type="mandatory">libgudev1</packagereq>
       <packagereq type="mandatory">systemd-sysv</packagereq>
+      <packagereq type="mandatory">cryptsetup-libs</packagereq>
+      <packagereq type="mandatory">expat</packagereq>
+      <packagereq type="mandatory">libgcc</packagereq>
+      <packagereq type="mandatory">libgomp</packagereq>
+      <packagereq type="mandatory">libstdc++</packagereq>
+      <packagereq type="mandatory">java-1.7.0-openjdk</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

@@ -160,6 +160,11 @@
       <packagereq type="mandatory">sqlite-devel</packagereq>
       <packagereq type="mandatory">startup-notification-devel</packagereq>
       <packagereq type="mandatory">systemd-devel</packagereq>
+      <packagereq type="mandatory">cryptsetup-libs</packagereq>
+      <packagereq type="mandatory">expat</packagereq>
+      <packagereq type="mandatory">libgcc</packagereq>
+      <packagereq type="mandatory">libgomp</packagereq>
+      <packagereq type="mandatory">libstdc++</packagereq>
       <packagereq type="mandatory">java-1.7.0-openjdk</packagereq>
       <packagereq type="mandatory">tbb-devel</packagereq>
       <packagereq type="mandatory">tcl-devel</packagereq>

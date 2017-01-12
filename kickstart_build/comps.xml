@@ -1215,6 +1215,7 @@
       <packagereq type="mandatory">dracut-network</packagereq>
       <packagereq type="mandatory">libgudev1</packagereq>
       <packagereq type="mandatory">systemd-sysv</packagereq>
+      <packagereq type="mandatory">cryptsetup</packagereq>
       <packagereq type="mandatory">cryptsetup-libs</packagereq>
       <packagereq type="mandatory">expat</packagereq>
       <packagereq type="mandatory">libgcc</packagereq>

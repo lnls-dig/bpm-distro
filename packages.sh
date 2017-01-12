@@ -18,7 +18,7 @@ ncurses-devel perl-XML-Simple selinux-policy yum-utils openssl libdb-utils creat
 genisoimage pykickstart ntp ntpdate acpid libusb-devel bash-completion \
 perl-ExtUtils-* perl-Pod-Checker perl-Pod-Parser iptables-services syslinux \
 pciutils telnet psmisc valgrind dracut systemd-libs systemd dracut-network libgudev1 \
-systemd-sysv cryptsetup-libs expat libgcc libgomp libstdc++ java-1.7.0-openjdk "
+systemd-sysv cryptsetup cryptsetup-libs expat libgcc libgomp libstdc++ java-1.7.0-openjdk "
 
 # EPICS dependencies
 PACKAGES+="libstdc++-devel lapack freetype-devel fontconfig-devel \

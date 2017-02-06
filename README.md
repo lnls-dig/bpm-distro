@@ -9,13 +9,13 @@ The set os scripts located here serves two main purposes:
 
 1. Download a Minimal Centos7 ISO image from one of the following official mirrors:
 
-    http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso
+	http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso
 
 2. Install the image in a VM (e.g., VMPlayer or VirtualBox)
 
 3. Burn the image into a USB stick
 
-    sudo dd if=<Centos7 Minimal ISO> of=/dev/<usb stick device>
+	sudo dd if=<Centos7 Minimal ISO> of=/dev/<usb stick device>
 
 4. Plug the USB stick into the VM
 
@@ -29,6 +29,6 @@ The set os scripts located here serves two main purposes:
 
 7. Generate the custom Centos7 image with automated install
 
-    ./setup-all.sh -i /dev/<centos image device> 2>&1 | tee log.txt
+	./setup-all.sh -i /dev/<centos image device> 2>&1 | tee log.txt
 
 8. The image will be created inside kickstart_build/ directory

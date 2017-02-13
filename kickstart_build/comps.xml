@@ -1224,6 +1224,7 @@
       <packagereq type="mandatory">java-1.7.0-openjdk</packagereq>
       <packagereq type="mandatory">firewalld-filesystem</packagereq>
       <packagereq type="mandatory">python-firewall</packagereq>
+      <packagereq type="mandatory">hdf5-devel</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

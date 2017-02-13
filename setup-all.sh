@@ -16,11 +16,11 @@ while getopts ":i:" opt; do
         i)
             ISO_PATH=${OPTARG}
             ;;
-        \?) 
+        \?)
             echo "Invalid option: $OPTARG" >&2
             exit 1
             ;;
-        :) 
+        :)
             echo "Option -$OPTARG requires an argument." >&2
             exit 1
             ;;
@@ -44,6 +44,9 @@ fi
 
 # Install missing xorriso package and dependencies from tarballs or from source
 ./install-xorriso.sh
+
+# Install missing szip from PUIAS repository
+./install-szip.sh
 
 # Setup initscripts
 ./setup-initscripts.sh

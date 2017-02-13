@@ -24,7 +24,8 @@ systemd-sysv cryptsetup cryptsetup-libs expat libgcc libgomp libstdc++ java-1.7.
 # EPICS dependencies
 PACKAGES+="libstdc++-devel lapack freetype-devel fontconfig-devel \
 libjpeg-turbo-devel libtiff-devel giflib-devel libcurl-devel flex \
-libX11-devel libXext-devel libXaw-devel libXp-devel hdf5-devel "
+libX11-devel libXext-devel libXaw-devel libXp-devel hdf5-devel ImageMagick \
+ImageMagick-devel "
 
 # Kernel Packages
 KERNEL_PACKAGES="kernel-${KERNEL_VERSION} kernel-tools-${KERNEL_VERSION} \

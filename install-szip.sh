@@ -17,4 +17,7 @@ sudo yum remove -y szip
 # Install it
 sudo rpm -Uvh --replacepkgs szip-${SZIP_VERSION}.sdl7.x86_64.rpm
 
+# Add symlinks
+sudo ln -sf /usr/lib64/libsz.so.2 /usr/lib64/libsz.so
+
 cd ../../

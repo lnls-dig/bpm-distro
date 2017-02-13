@@ -1225,6 +1225,7 @@
       <packagereq type="mandatory">firewalld-filesystem</packagereq>
       <packagereq type="mandatory">python-firewall</packagereq>
       <packagereq type="mandatory">hdf5-devel</packagereq>
+      <packagereq type="mandatory">szip</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

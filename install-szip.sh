@@ -17,7 +17,8 @@ sudo yum remove -y szip
 # Install it
 sudo rpm -Uvh --replacepkgs szip-${SZIP_VERSION}.sdl7.x86_64.rpm
 
-# Add symlinks
+# Add symlinks. This won't work as this link is only done
+# in the host image and not the generated one.
 sudo ln -sf /usr/lib64/libsz.so.2 /usr/lib64/libsz.so
 
 cd ../../

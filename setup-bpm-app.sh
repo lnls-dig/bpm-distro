@@ -19,4 +19,7 @@ git clone https://github.com/lnls-dig/bpm-app
 cd bpm-app
 ./get-all.sh -r server -b afcv3_1 -a yes -e yes -o
 
+# Copy MANIFEST file to base directory
+cp MANIFEST ${PWD}
+
 cd ${PWD}

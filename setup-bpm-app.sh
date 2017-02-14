@@ -3,7 +3,7 @@
 set -e
 set -x
 
-PWD=$(pwd)
+TOP_DIR=$(pwd)
 
 # Setup dirs
 mkdir -p kickstart_build/isolinux/postinstall/apps
@@ -20,6 +20,6 @@ cd bpm-app
 ./get-all.sh -r server -b afcv3_1 -a yes -e yes -o
 
 # Copy MANIFEST file to base directory
-cp MANIFEST ${PWD}
+cp MANIFEST ${TOP_DIR}
 
-cd ${PWD}
+cd ${TOP_DIR}

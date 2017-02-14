@@ -22,11 +22,11 @@ while getopts ":i:" opt; do
         i)
             ISO_PATH=${OPTARG}
             ;;
-        \?) 
+        \?)
             echo "Invalid option: $OPTARG" >&2
             exit 1
             ;;
-        :) 
+        :)
             echo "Option -$OPTARG requires an argument." >&2
             exit 1
             ;;
@@ -46,15 +46,15 @@ sudo mkdir -p ${MOUNT_POINT}
 sudo umount ${ISO_PATH} || /bin/true
 sudo mount ${ISO_PATH} ${MOUNT_POINT}
 
-### From this point on, the isntructions were extract from 
+### From this point on, the isntructions were extract from
 ### www.smorgasbork.com/2014/07/16/building-a-custom-centos-7-kickstart-disc-part-1/
 
 ### Don't remove everything by default. We rely on already setup config files
 ## Remove all files for precaution. We want to start cleanly
 #rm -rf kickstart_build
 
-# Exclude isolinux directory contents (including hidden files) as this should be 
-# copied as is from disk image. 
+# Exclude isolinux directory contents (including hidden files) as this should be
+# copied as is from disk image.
 cd kickstart_build
 # Remove protected images folder first
 sudo rm -rf isolinux/images
@@ -134,7 +134,7 @@ installed_packages; while read -r package; do COMMAND="sudo yumdownloader --reso
 rm installed_packages
 cd ../../
 
-### Don't get default script from site. This is already available in 
+### Don't get default script from site. This is already available in
 ### kickstart_build/utils/gather_pacakges.pl
 ## Get script to parse comps.xml
 #wget www.smorgasbork.com/content/gather_packages.txt
@@ -154,12 +154,12 @@ cd ../../
 #sudo chmod 755 kickstart_build/isolinux/ks/ks.cfg
 #sudo chown ${USER}:${USER} kickstart_build/isolinux/ks/ks.cfg
 
-# Copy packages specified in file comps.xml to Packages directory. They 
+# Copy packages specified in file comps.xml to Packages directory. They
 # must reside in all_rpms directory
 kickstart_build/utils/gather_packages.pl kickstart_build/comps.xml \
 kickstart_build/all_rpms kickstart_build/isolinux/Packages ${HOST_ARCH}
 
-# Copy package dependencies into Packages directory. They must reside in 
+# Copy package dependencies into Packages directory. They must reside in
 # all_rpms directory
 kickstart_build/utils/resolve_deps.pl \
 kickstart_build/all_rpms kickstart_build/isolinux/Packages ${HOST_ARCH}

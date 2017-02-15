@@ -1170,11 +1170,11 @@
       <packagereq type="mandatory">ntp</packagereq>
       <packagereq type="mandatory">ntpdate</packagereq>
       <packagereq type="mandatory">acpid</packagereq>
-      <packagereq type="mandatory">kernel</packagereq>
-      <packagereq type="mandatory">kernel-tools</packagereq>
-      <packagereq type="mandatory">kernel-tools-libs</packagereq>
-      <packagereq type="mandatory">kernel-devel</packagereq>
-      <packagereq type="mandatory">kernel-headers</packagereq>
+      <packagereq type="mandatory">kernel-lt</packagereq>
+      <packagereq type="mandatory">kernel-lt-tools</packagereq>
+      <packagereq type="mandatory">kernel-lt-tools-libs</packagereq>
+      <packagereq type="mandatory">kernel-lt-devel</packagereq>
+      <packagereq type="mandatory">kernel-lt-headers</packagereq>
       <packagereq type="mandatory">libdb-utils</packagereq>
       <packagereq type="mandatory">gdb</packagereq>
       <packagereq type="mandatory">curl</packagereq>

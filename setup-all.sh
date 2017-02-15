@@ -36,11 +36,11 @@ fi
 
 ### Install packages, scripts and setup ISO tree
 
-# Install packages
-./install-packages.sh
-
 # Install kernel
 ./install-kernel.sh
+
+# Install packages
+./install-packages.sh
 
 # Install missing packages from tarballs or from source
 ./install-re2c.sh

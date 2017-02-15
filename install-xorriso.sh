@@ -3,10 +3,7 @@
 set -e
 set -x
 
-XORRISO_VERSION=1.4.6-1
-LIBBURN_VERSION=1.4.6-1
-LIBISOBURN_VERSION=1.4.6-1
-LIBISOFS_VERSION=1.4.6-1
+. ./repo-versions.sh
 
 # Change to RPM directory
 cd kickstart_build/all_rpms

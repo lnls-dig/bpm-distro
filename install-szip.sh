@@ -3,7 +3,7 @@
 set -e
 set -x
 
-SZIP_VERSION=2.1-1
+. ./repo-versions.sh
 
 # Change to RPM directory
 cd kickstart_build/all_rpms

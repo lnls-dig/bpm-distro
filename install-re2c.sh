@@ -3,7 +3,7 @@
 set -e
 set -x
 
-RE2C_VERSION=0.13.5-1
+. ./repo-versions.sh
 
 # Change to RPM directory
 cd kickstart_build/all_rpms

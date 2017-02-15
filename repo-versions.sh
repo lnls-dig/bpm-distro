@@ -4,7 +4,9 @@ set -e
 set -x
 
 # Specific packages versions
-KERNEL_VERSION="3.10.0-514.2.2.el7.x86_64"
+KERNEL_VERSION="4.4.48-1"
+KERNEL_VERSION_SUFFIX="el7.elrepo.x86_64"
+KERNEL_VERSION_FULL=${KERNEL_VERSION}.${KERNEL_VERSION_SUFFIX}
 
 # Package versions
 RE2C_VERSION=0.13.5-1

@@ -27,7 +27,7 @@ libjpeg-turbo-devel libtiff-devel giflib-devel libcurl-devel flex \
 libX11-devel libXext-devel libXaw-devel libXp-devel hdf5-devel ImageMagick \
 ImageMagick-devel "
 
-# Kernel Packages
-KERNEL_PACKAGES="kernel-${KERNEL_VERSION} kernel-tools-${KERNEL_VERSION} \
-kernel-tools-libs-${KERNEL_VERSION} kernel-headers-${KERNEL_VERSION} \
-kernel-devel-${KERNEL_VERSION} "
+# Kernel Packages. These are install separatly by install-kernel.sh script
+#KERNEL_PACKAGES="kernel-${KERNEL_VERSION} kernel-tools-${KERNEL_VERSION} \
+#kernel-tools-libs-${KERNEL_VERSION} kernel-headers-${KERNEL_VERSION} \
+#kernel-devel-${KERNEL_VERSION} "

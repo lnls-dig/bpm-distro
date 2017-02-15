@@ -39,6 +39,9 @@ fi
 # Install packages
 ./install-packages.sh
 
+# Install kernel
+./install-kernel.sh
+
 # Install missing packages from tarballs or from source
 ./install-re2c.sh
 

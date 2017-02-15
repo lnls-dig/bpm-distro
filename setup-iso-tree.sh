@@ -129,7 +129,8 @@ sed -e 's/^gpg-pubkey.*//g' \
     -e 's/^libisoburn.*//g' \
     -e 's/^xorriso.*//g' \
     -e 's/^szip.*//g' \
-    -e "/^kernel.*${KERNEL_VERSION}/! s/^kernel.*//g" > \
+    -e 's/^kernel.*//g' \
+    > \
 installed_packages; while read -r package; do COMMAND="sudo yumdownloader --resolve ${package}"; echo "${COMMAND}"; eval ${COMMAND}; done < installed_packages
 rm installed_packages
 cd ../../

@@ -3,6 +3,9 @@
 set -e
 set -x
 
+# Source environment variables
+. ./repo-versions.sh
+
 TOP_DIR=$(pwd)
 
 # Setup dirs

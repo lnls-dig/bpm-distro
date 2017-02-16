@@ -8,6 +8,10 @@ KERNEL_VERSION="4.4.48-1"
 KERNEL_VERSION_SUFFIX="el7.elrepo.x86_64"
 KERNEL_VERSION_FULL=${KERNEL_VERSION}.${KERNEL_VERSION_SUFFIX}
 
+# We export these variables as other scripts will use it
+export HALCS_KERNEL_DIR=/lib/modules/${KERNEL_VERSION_FULL}/build
+export HALCS_DRIVER_INSTALL_DIR=/lib/modules/${KERNEL_VERSION_FULL}/extra
+
 # Package versions
 RE2C_VERSION=0.13.5-1
 SZIP_VERSION=2.1-1

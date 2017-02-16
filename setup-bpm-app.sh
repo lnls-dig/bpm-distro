@@ -16,7 +16,7 @@ cd kickstart_build/isolinux/postinstall/apps
 rm -rf bpm-app
 
 # Clone BPM App repo
-git clone https://github.com/lnls-dig/bpm-app
+git clone --recursive --branch=${BPM_APP_VERSION} https://github.com/lnls-dig/bpm-app
 
 # Download the repos, but don't install them
 cd bpm-app

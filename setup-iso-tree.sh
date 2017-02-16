@@ -110,6 +110,7 @@ cp -r ${MOUNT_POINT}/LiveOS/* kickstart_build/isolinux/LiveOS
 # as they are installed separately
 find ${MOUNT_POINT}/Packages/  \
     -type f \
+    -not -name "kernel*" \
     -exec cp "{}" kickstart_build/all_rpms/ \;
 
 # Change permissions

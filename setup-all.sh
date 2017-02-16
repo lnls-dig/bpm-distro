@@ -60,6 +60,9 @@ fi
 # Setup BPM app packages
 ./setup-bpm-app.sh
 
+# Setup BPM distro packages
+./setup-bpm-distro.sh
+
 # Fix generated ISO for USB bootable support
 ./fix-usb-boot-iso.sh
 

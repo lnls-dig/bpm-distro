@@ -11,6 +11,7 @@ KERNEL_VERSION_FULL=${KERNEL_VERSION}.${KERNEL_VERSION_SUFFIX}
 # We export these variables as other scripts will use it
 export HALCS_KERNEL_DIR=/lib/modules/${KERNEL_VERSION_FULL}/build
 export HALCS_DRIVER_INSTALL_DIR=/lib/modules/${KERNEL_VERSION_FULL}/extra
+export HALCS_KERNEL_VERSION=${KERNEL_VERSION_FULL}
 
 # Package versions
 RE2C_VERSION=0.13.5-1

@@ -4,7 +4,7 @@ set -e
 set -x
 
 # Specific packages versions
-KERNEL_VERSION=$(repoquery --enablerepo=elrepo-kernel kernel-lt | sed -e "s/kernel-lt-0:\([0-9]*.[0-9]*.[0-9]*-[0-9]\).*/\1/g")
+KERNEL_VERSION=<INSERT_KERNEL_VERSION>
 KERNEL_VERSION_SUFFIX="el7.elrepo.x86_64"
 KERNEL_VERSION_FULL=${KERNEL_VERSION}.${KERNEL_VERSION_SUFFIX}
 

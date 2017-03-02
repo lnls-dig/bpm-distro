@@ -36,6 +36,9 @@ fi
 
 ### Install packages, scripts and setup ISO tree
 
+# Setup environment
+./setup-env.sh
+
 # Install kernel
 ./install-kernel.sh
 

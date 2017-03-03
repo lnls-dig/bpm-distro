@@ -21,4 +21,9 @@ rm -rf bpm-distro
 # the target image
 git clone --recursive --branch=${BPM_DISTRO_VERSION} https://github.com/lnls-dig/bpm-distro
 
+# Setup environment file
+cd bpm-distro
+./setup-env.sh
+cd ..
+
 cd ${TOP_DIR}

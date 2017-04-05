@@ -20,7 +20,7 @@ git clone --recursive --branch=${BPM_APP_VERSION} https://github.com/lnls-dig/bp
 
 # Download the repos, but don't install them
 cd bpm-app
-./get-all.sh -r server -b afcv3_1 -a yes -e yes -l yes -o
+./get-all.sh -r server -b afcv3_1 -a yes -e yes -x yes -l yes -o
 
 # Copy MANIFEST file to base directory
 cp MANIFEST ${TOP_DIR}

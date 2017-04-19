@@ -14,6 +14,7 @@ export HALCS_DRIVER_INSTALL_DIR=/lib/modules/${KERNEL_VERSION_FULL}/extra
 export HALCS_KERNEL_VERSION=${KERNEL_VERSION_FULL}
 
 # Package versions
+FEDORA_ISO_UTILS_REPO_URL=http://archives.fedoraproject.org/pub/archive/epel/5/x86_64
 RE2C_VERSION=0.13.5-1
 SZIP_VERSION=2.1-1
 XORRISO_VERSION=1.4.6-1

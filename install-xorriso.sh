@@ -9,10 +9,10 @@ set -x
 cd kickstart_build/all_rpms
 
 # Download Repoforge
-wget http://dl.fedoraproject.org/pub/epel/5/x86_64/libisofs-${LIBISOFS_VERSION}.el5.x86_64.rpm
-wget http://dl.fedoraproject.org/pub/epel/5/x86_64/libburn-${LIBBURN_VERSION}.el5.x86_64.rpm
-wget http://dl.fedoraproject.org/pub/epel/5/x86_64/libisoburn-${LIBISOBURN_VERSION}.el5.x86_64.rpm
-wget http://dl.fedoraproject.org/pub/epel/5/x86_64/xorriso-${XORRISO_VERSION}.el5.x86_64.rpm
+wget ${FEDORA_ISO_UTILS_REPO_URL}/libisofs-${LIBISOFS_VERSION}.el5.x86_64.rpm
+wget ${FEDORA_ISO_UTILS_REPO_URL}/libburn-${LIBBURN_VERSION}.el5.x86_64.rpm
+wget ${FEDORA_ISO_UTILS_REPO_URL}/libisoburn-${LIBISOBURN_VERSION}.el5.x86_64.rpm
+wget ${FEDORA_ISO_UTILS_REPO_URL}/xorriso-${XORRISO_VERSION}.el5.x86_64.rpm
 
 # Remove xorriso that may be already installed
 sudo yum remove -y libisofs

@@ -1228,6 +1228,7 @@
       <packagereq type="mandatory">szip</packagereq>
       <packagereq type="mandatory">ImageMagick</packagereq>
       <packagereq type="mandatory">ImageMagick-devel</packagereq>
+      <packagereq type="mandatory">arp-scan</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

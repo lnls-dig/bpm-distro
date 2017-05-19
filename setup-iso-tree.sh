@@ -125,6 +125,7 @@ rpm -qa | \
 # KERNEL_VERSION
 sed -e 's/^gpg-pubkey.*//g' \
     -e 's/^re2c.*//g' \
+    -e 's/^arp-scan.*//g' \
     -e 's/^libisofs.*//g' \
     -e 's/^libburn.*//g' \
     -e 's/^libisoburn.*//g' \

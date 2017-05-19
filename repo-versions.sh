@@ -16,6 +16,7 @@ export HALCS_KERNEL_VERSION=${KERNEL_VERSION_FULL}
 # Package versions
 FEDORA_ISO_UTILS_REPO_URL=http://archives.fedoraproject.org/pub/archive/epel/5/x86_64
 RE2C_VERSION=0.13.5-1
+ARP_SCAN_VERSION=1.9.2-1
 SZIP_VERSION=2.1-1
 XORRISO_VERSION=1.4.6-1
 LIBBURN_VERSION=1.4.6-1
@@ -24,4 +25,4 @@ LIBISOFS_VERSION=1.4.6-1
 
 # BPM versions
 BPM_DISTRO_VERSION=master
-BPM_APP_VERSION=master
+BPM_APP_VERSION=epics-dev-submodule

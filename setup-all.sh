@@ -48,6 +48,9 @@ fi
 # Install missing packages from tarballs or from source
 ./install-re2c.sh
 
+# Install missing packages from tarballs or from source
+./install-arp-scan.sh
+
 # Install missing xorriso package and dependencies from tarballs or from source
 ./install-xorriso.sh
 

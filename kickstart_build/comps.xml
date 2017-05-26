@@ -1190,7 +1190,7 @@
       <packagereq type="mandatory">perl-ExtUtils-Manifest</packagereq>
       <packagereq type="mandatory">perl-ExtUtils-ParseXS</packagereq>
       <packagereq type="mandatory">perl-Pod-Checker</packagereq>
-      <packagereq type="mandatory">perl-Pod-Parser</packagereq>
+      <packagereq type="mandatory">perl-libwww-perl</packagereq>
       <packagereq type="mandatory">opemotif-devel</packagereq>
       <packagereq type="mandatory">freetype-devel</packagereq>
       <packagereq type="mandatory">fontconfig-devel</packagereq>

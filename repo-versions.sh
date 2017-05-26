@@ -25,4 +25,4 @@ LIBISOFS_VERSION=1.4.6-1
 
 # BPM versions
 BPM_DISTRO_VERSION=master
-BPM_APP_VERSION=epics-dev-submodule
+BPM_APP_VERSION=master

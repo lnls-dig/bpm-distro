@@ -34,6 +34,12 @@ if [ -z "${ISO_PATH}" ]; then
     exit 1;
 fi
 
+# Ask sudo password only once and
+# keep updating sudo timestamp to
+# avoid asking again
+while true; do sudo -n true; sleep 60; kill -0 "$$" || \
+    exit; done 2>/dev/null &
+
 ### Install packages, scripts and setup ISO tree
 
 # Setup environment

@@ -15,6 +15,7 @@ export HALCS_KERNEL_VERSION=${KERNEL_VERSION_FULL}
 
 # Package versions
 FEDORA_ISO_UTILS_REPO_URL=http://archives.fedoraproject.org/pub/archive/epel/5/x86_64
+EPEL_6_REPO_URL=http://dl.fedoraproject.org/pub/epel/6/x86_64/Packages
 RE2C_VERSION=0.13.5-1
 ARP_SCAN_VERSION=1.9.2-1
 SZIP_VERSION=2.1-1

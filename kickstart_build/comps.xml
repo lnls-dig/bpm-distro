@@ -1107,6 +1107,9 @@
       <packagereq type="mandatory">curl</packagereq>
       <packagereq type="mandatory">dhclient</packagereq>
       <packagereq type="mandatory">e2fsprogs</packagereq>
+      <packagereq type="mandatory">e2fsprogs-libs</packagereq>
+      <packagereq type="mandatory">libss</packagereq>
+      <packagereq type="mandatory">libcom_err</packagereq>
       <packagereq type="mandatory">filesystem</packagereq>
       <packagereq type="mandatory">firewalld</packagereq>
       <packagereq type="mandatory">glibc</packagereq>

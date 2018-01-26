@@ -20,7 +20,7 @@ perl-ExtUtils-* perl-Pod-Checker perl-Pod-Parser perl-libwww-perl iptables-servi
 pciutils telnet psmisc valgrind dracut systemd-libs systemd dracut-network libgudev1 \
 firewalld-filsystem python-firewall \
 systemd-sysv cryptsetup cryptsetup-libs expat libgcc libgomp libstdc++ java-1.8.0-openjdk \
-e2fsprogs e2fsprogs-libs libss libcom_err lsof "
+e2fsprogs e2fsprogs-libs libss libcom_err lsof libaec "
 
 # EPICS dependencies
 PACKAGES+="libstdc++-devel lapack freetype-devel fontconfig-devel \

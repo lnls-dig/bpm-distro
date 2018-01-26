@@ -61,8 +61,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || \
 # Install missing xorriso package and dependencies from tarballs or from source
 ./install-xorriso.sh
 
-# Install missing szip from PUIAS repository
-./install-szip.sh
+# SZIP is provided by libaec, so no need to install it separately
 
 # Setup initscripts
 ./setup-initscripts.sh

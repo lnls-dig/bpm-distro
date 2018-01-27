@@ -4,7 +4,7 @@ set -e
 set -x
 
 # Specific packages versions
-KERNEL_VERSION="<INSERT_KERNEL_VERSION>"
+KERNEL_VERSION="4.4.105-1"
 KERNEL_VERSION_SUFFIX="el7.elrepo.x86_64"
 KERNEL_VERSION_FULL=${KERNEL_VERSION}.${KERNEL_VERSION_SUFFIX}
 KERNEL_DOWNLOAD_URL="http://elrepo.org/linux/kernel/el7/x86_64/RPMS"

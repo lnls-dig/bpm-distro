@@ -7,8 +7,7 @@ set -x
 KERNEL_VERSION="4.4.105-1"
 KERNEL_VERSION_SUFFIX="el7.elrepo.x86_64"
 KERNEL_VERSION_FULL=${KERNEL_VERSION}.${KERNEL_VERSION_SUFFIX}
-#KERNEL_DOWNLOAD_URL="http://elrepo.org/linux/kernel/el7/x86_64/RPMS"
-KERNEL_DOWNLOAD_URL="ftp.colocall.net/pub/elrepo/archive/kernel/el7/x86_64/RPMS"
+KERNEL_DOWNLOAD_URL="http://elrepo.org/linux/kernel/el7/x86_64/RPMS"
 
 # We export these variables as other scripts will use it
 export HALCS_KERNEL_DIR=/lib/modules/${KERNEL_VERSION_FULL}/build

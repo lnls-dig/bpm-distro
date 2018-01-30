@@ -1209,6 +1209,7 @@
       <packagereq type="mandatory">libpng12-devel</packagereq>
       <packagereq type="mandatory">ncurses-devel</packagereq>
       <packagereq type="mandatory">pciutils</packagereq>
+      <packagereq type="mandatory">pciutils-libs</packagereq>
       <packagereq type="mandatory">telnet</packagereq>
       <packagereq type="mandatory">psmisc</packagereq>
       <packagereq type="mandatory">valgrind</packagereq>

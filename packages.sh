@@ -17,7 +17,7 @@ uuid-devel readline-devel libusb-devel bzip2-devel libpng12-devel libxml2-devel 
 ncurses-devel perl-XML-Simple selinux-policy yum-utils openssl libdb-utils createrepo \
 genisoimage pykickstart ntp ntpdate acpid libusb-devel bash-completion \
 perl-ExtUtils-* perl-Pod-Checker perl-Pod-Parser perl-libwww-perl iptables-services syslinux \
-pciutils telnet psmisc valgrind dracut systemd-libs systemd dracut-network libgudev1 \
+pciutils pciutils-libs telnet psmisc valgrind dracut systemd-libs systemd dracut-network libgudev1 \
 firewalld-filsystem python-firewall \
 systemd-sysv cryptsetup cryptsetup-libs expat libgcc libgomp libstdc++ java-1.8.0-openjdk \
 e2fsprogs e2fsprogs-libs libss libcom_err lsof libaec "

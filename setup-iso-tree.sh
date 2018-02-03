@@ -53,6 +53,10 @@ sudo mount ${ISO_PATH} ${MOUNT_POINT}
 ## Remove all files for precaution. We want to start cleanly
 #rm -rf kickstart_build
 
+# Remove RPM packages that might have been downloaded in a previous build
+rm -rf kickstart_build/all_rpms/*
+rm -rf kickstart_build/isolinux/Packages/*
+
 # Exclude isolinux directory contents (including hidden files) as this should be
 # copied as is from disk image.
 cd kickstart_build

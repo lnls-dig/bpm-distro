@@ -75,6 +75,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || \
 # Setup BPM distro packages
 ./setup-bpm-distro.sh
 
+# Setup TIM RX packages
+./setup-tim-rx-app.sh
+
 # Fix generated ISO for USB bootable support
 ./fix-usb-boot-iso.sh
 

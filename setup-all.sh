@@ -43,6 +43,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || \
 
 ### Install packages, scripts and setup ISO tree
 
+# Cleanup residual packages
+rm -rf kickstart_build/all_rpms/*
+rm -rf kickstart_build/isolinux/Packages/*
+
 # Setup environment
 ./setup-env.sh
 

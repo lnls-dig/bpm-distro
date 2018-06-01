@@ -11,3 +11,6 @@ sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm |
 KERNEL_VERSION=$(repoquery --enablerepo=elrepo-kernel kernel-lt | sed -e "s/kernel-lt-0:\([0-9]*.[0-9]*.[0-9]*-[0-9]\).*/\1/g")
 
 sed -i -e "s/<INSERT_KERNEL_VERSION>/${KERNEL_VERSION}/g" repo-versions.sh
+
+# Reinstall cerificates in case of old repo. let's encrypt might not be there.
+sudo yum -y reinstall ca-certificates

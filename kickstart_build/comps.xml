@@ -1235,6 +1235,7 @@
       <packagereq type="mandatory">arp-scan</packagereq>
       <packagereq type="mandatory">lsof</packagereq>
       <packagereq type="mandatory">libaec</packagereq>
+      <packagereq type="mandatory">zabbix-agent</packagereq>
       <packagereq type="default">aic94xx-firmware</packagereq>
       <packagereq type="default">alsa-firmware</packagereq>
       <packagereq type="default">bfa-firmware</packagereq>

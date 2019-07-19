@@ -32,3 +32,6 @@ ImageMagick-devel "
 #KERNEL_PACKAGES="kernel-${KERNEL_VERSION} kernel-tools-${KERNEL_VERSION} \
 #kernel-tools-libs-${KERNEL_VERSION} kernel-headers-${KERNEL_VERSION} \
 #kernel-devel-${KERNEL_VERSION} "
+
+# Zabbix agent
+PACKAGES+="zabbix-agent "
